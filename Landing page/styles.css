@@ -1,0 +1,155 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  /* Subtle pattern + soft green overlay */
+  background:
+    linear-gradient(rgba(200,255,200,0.5), rgba(255,255,255,0.7)),
+    url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
+  background-blend-mode: lighten, normal, normal;
+  background-size: auto, auto, cover;
+  background-repeat: repeat, repeat, no-repeat;
+  background-position: top left, top left, center center;
+}
+
+
+/* Navbar styles */
+.navbar {
+display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:
+    linear-gradient(90deg, #1976d2 70%, #64b5f6 100%),
+    url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+  background-blend-mode: overlay;
+  padding: 1em 2em;
+  color: white;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.15);
+  position: relative;
+  z-index: 10;
+}
+.logo {
+  font-size: 1.7em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-links li {
+  margin-left: 20px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #cddc39;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+background:
+    linear-gradient(120deg, rgba(56,142,60,0.85) 0%, rgba(168,224,99,0.7) 100%),
+    url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(56,142,60,0.15);
+}
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #fff;
+  color: #388e3c;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+  border: 2px solid #388e3c;
+}
+.cta-button:hover {
+  background-color: #cddc39;
+  color: #222;
+}
+
+/* Features */
+.features {
+  padding: 60px 20px;
+  text-align: center;
+}
+.feature-box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.feature-box div {
+  background: #e8f5e9;
+  padding: 24px;
+  margin: 10px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 180px;
+  box-shadow: 0 2px 8px rgba(56, 142, 60, 0.08);
+  font-size: 1.1em;
+}
+
+/* Contact */
+.contact {
+  background-color: #f1f8e9;
+  padding: 40px 20px;
+  text-align: center;
+}
+.contact a {
+  color: #388e3c;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #388e3c;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #388e3c;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .feature-box {
+    flex-direction: column;
+    align-items: center;
+  }
+}
